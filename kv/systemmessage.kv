@@ -1,0 +1,30 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<SystemMessage>:
+    canvas:
+        Color:
+            rgb: (0, 0, 0)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    orientation: "vertical"
+    width: "1280dp"
+    height: "720dp"
+    size_hint: None, None
+    opacity: 1 if (not app.capture_init or app.is_system_message_visible) else 0
+    Label:
+        font_name: "meiryo"
+        font_size: "32sp"
+        text_size: self.size
+        halign: "center"
+        valign: "bottom"
+        color: hex("#F4F4F4")
+        text: app.system_message_header
+    Label:
+        font_name: "meiryo"
+        font_size: "28sp"
+        text_size: self.size
+        halign: "center"
+        valign: "top"
+        color: hex("#F4F4F4")
+        text: app.system_message_text

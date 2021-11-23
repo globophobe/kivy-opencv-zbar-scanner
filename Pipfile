@@ -1,0 +1,20 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[dev-packages]
+
+ipython = "*"
+pyinstaller = "*"
+
+
+[packages]
+
+kivy = "*"
+pillow = "*"
+kivymd = "*"
+pyzbar = "*"
+opencv-python-headless = {"version" = "*", sys_platform = "== 'win32'"}

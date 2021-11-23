@@ -1,0 +1,12 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<CardHelper>:
+    opacity: 1 if app.is_scanning else 0
+    width: "310dp"
+    height: "200dp"
+    size_hint: None, None
+    Label:
+        font_name: "meiryo"
+        font_size: "36sp"
+        text: root.helper_text
+        color: hex("#EEEEEE")

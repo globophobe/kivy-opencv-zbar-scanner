@@ -1,0 +1,54 @@
+#:import hex kivy.utils.get_color_from_hex
+#:import get_filename simplecamera.lib.resources.get_filename
+
+<DebugCharacter>:
+    anchor_x: "right"
+    anchor_y: "top"
+    padding: [0, dp(25), dp(15), 0]
+    opacity: 0 if (not app.capture_init or not app.is_debug_character_visible) else 1
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: (0, 0, 0, 0.15)
+            RoundedRectangle:
+                segments: 50
+                pos: self.pos
+                size: self.size
+        canvas:
+            Color:
+                rgb: (1, 1, 1)
+            RoundedRectangle:
+                segments: 50
+                pos: self.x + dp(9), self.y + dp(9)
+                size: self.width - dp(18), self.height - dp(18)
+        width: "225dp"
+        height: "125dp"
+        size_hint: None, None
+        padding: [dp(10), dp(10)]
+        BoxLayout:
+            orientation: "vertical" 
+            padding: [0, 0, 0, dp(10)]
+            Label:
+                font_name: "meiryo"
+                font_size: "16sp"
+                text_size: self.size
+                halign: "center"
+                valign: "center"
+                # Near black
+                color: hex("#777777")
+                text: root.header
+                size_hint_y: 0.3
+            Image:
+                source: get_filename("assets/lock.png")
+                size_hint_y: 0.7
+        BoxLayout:
+            Label:
+                font_name: "meiryo"
+                font_size: "18sp"
+                text_size: self.size
+                halign: "left"
+                valign: "center"
+                # Near black
+                color: hex("#111111")
+                text: root.message
+                markup: True

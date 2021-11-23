@@ -1,0 +1,40 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<MainWindow>:
+    app: app
+    canvas.before:
+        Color:
+            # Moon gray
+            rgb: hex('#CCCCCC')
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    AnchorLayout:
+        CameraPreview:
+            id: camera
+            app: app
+            debug_character: debug_character
+            body: body
+            card: card
+        SystemMessage:
+            id: system_message
+        FaceHelper:
+            id: face_helper
+            app: app
+        Body:
+            id: body
+    Card:
+        id: card
+        app: app
+        camera: camera
+    CardHelper:
+        id: card_helper
+        app: app
+    Clock:
+    DebugCharacter:
+        id: debug_character
+        app: app
+    AppSettings:
+        id: app_settings
+        app: app
+        camera: camera

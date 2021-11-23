@@ -1,0 +1,39 @@
+#:import hex kivy.utils.get_color_from_hex
+#:import get_filename simplecamera.lib.resources.get_filename
+
+<Clock>:
+    anchor_x: "left" if not app.is_settings_menu_visible else "center"
+    anchor_y: "top"
+    padding: [dp(15), dp(20), 0, 0]
+    opacity: 0 if not app.capture_init else 1
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: (0, 0, 0, 0.15)
+            RoundedRectangle:
+                segments: 50
+                pos: self.pos
+                size: self.size
+        canvas:
+            Color:
+                rgb: (1, 1, 1)
+            RoundedRectangle:
+                segments: 50
+                pos: self.x + dp(9), self.y + dp(9)
+                size: self.width - dp(18), self.height - dp(18)
+        width: "225dp"
+        height: "85dp"
+        size_hint: None, None
+        padding: [dp(15), dp(15)]
+        Image:
+            source: get_filename("assets/logo.png")
+            size_hint_x: 0.4
+        BoxLayout:
+            padding: [0, dp(5), 0, 0]
+            Label:
+                id: current_time
+                font_name: "meiryo"
+                font_size: "22sp"
+                size_hint_x: 0.6
+                color: (17 / 255, 17 / 255, 17 / 255, 1)
+                text: ""

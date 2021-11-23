@@ -1,0 +1,23 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<FaceHelper>:
+    canvas:
+        Color:
+            rgba: (150 / 255, 204 / 255, 1, 0.15)
+        Ellipse:
+            pos: (self.center_x - root.head_radius, self.center_y - root.head_radius)
+            size: int(root.head_radius * 2), int(root.head_radius * 2)
+        RoundedRectangle:
+            segments: 30
+            radius: dp(50), dp(50), dp(5), dp(5)
+            pos: self.x + self.width / 2 - dp(250), self.y - dp(255)
+            size: dp(500), dp(110) 
+    orientation: "vertical"
+    opacity: 1 if (app.is_scanning and app.is_face_helper_active) else 0
+    height: dp(200)
+    size_hint_y: None
+    Label:
+        font_name: 'meiryo'
+        font_size: "64sp"
+        text: root.text
+        color: root.font_color

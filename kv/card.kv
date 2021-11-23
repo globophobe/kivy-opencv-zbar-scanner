@@ -1,0 +1,61 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<Card>:
+    canvas:
+        Color:
+            rgba: root.background_color
+        RoundedRectangle:
+            segments: 50
+            pos: self.x + dp(2.5), self.y + dp(2.5)
+            size: dp(305), dp(195)
+        Color:
+            rgba: root.border_color
+        Line:
+            width: dp(2.5)
+            rounded_rectangle: (self.x, self.y, dp(310), dp(200), 25)
+    id: card
+    opacity: 1 if app.capture_init else 0
+    width: '310dp'
+    height: '200dp'
+    size_hint: None, None
+    padding: [dp(13), dp(13)]
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: 0.4
+        Label:
+            font_name: 'meiryo'
+            font_size: '20sp'
+            text_size: self.size
+            valign: 'top'
+            halign: 'left'
+            text: root.header_block
+            color: (0, 0, 0, root.font_opacity)
+            markup: True
+            size_hint_y: 0.15
+        Label:
+            font_name: 'meiryo'
+            font_size: '16sp'
+            text_size: self.size
+            valign: 'top'
+            halign: 'left'
+            text: root.text_block
+            color: (0, 0, 0, root.font_opacity)
+            markup: True
+            size_hint_y: '0.65'
+        Label:
+            font_name: 'meiryo'
+            font_size: '18sp'
+            text_size: self.size
+            halign: 'right'
+            valign: 'bottom'
+            text: root.footer_block
+            color: (0, 0, 0, root.font_opacity)
+            size_hint_y: 0.2
+    BoxLayout:
+        size_hint_x: 0.6
+        padding: [10, 0, 0, 0]
+        KivyNumpyImage:
+            id: face_preview
+            allow_stretch: True
+            color: (1, 1, 1, root.face_preview_opacity)
+            source: None

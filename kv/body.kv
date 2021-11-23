@@ -1,0 +1,17 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<Body>:
+    canvas:
+        Color:
+            rgba: root.color
+        Line:
+            width: dp(3)
+            circle: (self.x + self.width / 2, self.y + self.height / 2, root.head_radius)
+        Line:
+            width: dp(3)
+            rounded_rectangle: (self.x + self.width / 2 - dp(250), self.y + dp(5), dp(500), dp(110), dp(5), dp(5), dp(50), dp(50), 30)
+    width: '1280dp'
+    height: '720dp'
+    size_hint: None, None
+    opacity: 0 if not app.capture_init else 1
+        

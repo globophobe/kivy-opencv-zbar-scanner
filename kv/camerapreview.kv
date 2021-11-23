@@ -1,0 +1,16 @@
+#:import hex kivy.utils.get_color_from_hex
+
+<CameraPreview>:
+    # Frame
+    canvas.before:
+        Color:
+            # Near White
+            rgb: (244 / 255, 244 / 255, 244 / 255)
+        RoundedRectangle:
+            segments: 50
+            pos: self.x - dp(9), self.y - dp(9)
+            size: self.width + dp(18), self.height + dp(18)
+    width: '1280dp'
+    height: '720dp'
+    size_hint: None, None
+   
