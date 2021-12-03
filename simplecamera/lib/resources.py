@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 def get_filename(relative_path):
-    """ Get absolute path to resource, works for dev and for PyInstaller """
+    """Get absolute path to resource, works for dev and for PyInstaller"""
     try:
         # PyInstaller creates a temp folder and stores path in _MEIPASS
         dirname = sys._MEIPASS

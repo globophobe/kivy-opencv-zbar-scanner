@@ -1,12 +1,11 @@
 from kivy.core.window import Window
-from kivy.uix.floatlayout import FloatLayout
 from kivy.lang import Builder
-from kivy.properties import ObjectProperty
 from kivy.metrics import dp
+from kivy.properties import ObjectProperty
+from kivy.uix.floatlayout import FloatLayout
 
-from .lib.resources import get_filename
 from .constants import HD
-
+from .lib.resources import get_filename
 
 Builder.load_file(get_filename("kv/mainwindow.kv"))
 

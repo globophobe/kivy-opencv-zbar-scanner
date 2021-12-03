@@ -1,10 +1,9 @@
 from io import BytesIO
 from threading import Thread
 
+import cv2
 import requests
 from PIL import Image
-
-import cv2
 
 HALF_HD = (640, 360)
 

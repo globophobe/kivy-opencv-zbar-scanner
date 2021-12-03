@@ -1,5 +1,5 @@
-from kivy.uix.boxlayout import BoxLayout
 from kivy.lang import Builder
+from kivy.uix.boxlayout import BoxLayout
 
 from .lib.resources import get_filename
 

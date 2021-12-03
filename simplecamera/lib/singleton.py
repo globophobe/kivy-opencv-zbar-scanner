@@ -2,11 +2,11 @@
 # Copied from tendo, because pbr build errors
 
 import logging
-from multiprocessing import Process
 import os
 import sys
 import tempfile
 import unittest
+from multiprocessing import Process
 
 
 class SingleInstanceException(BaseException):

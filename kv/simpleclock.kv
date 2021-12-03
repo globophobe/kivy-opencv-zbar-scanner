@@ -1,7 +1,6 @@
 #:import hex kivy.utils.get_color_from_hex
-#:import get_filename simplecamera.lib.resources.get_filename
 
-<Clock>:
+<SimpleClock>:
     anchor_x: "left" if not app.is_settings_menu_visible else "center"
     anchor_y: "top"
     padding: [dp(15), dp(20), 0, 0]
@@ -25,9 +24,6 @@
         height: "85dp"
         size_hint: None, None
         padding: [dp(15), dp(15)]
-        Image:
-            source: get_filename("assets/logo.png")
-            size_hint_x: 0.4
         BoxLayout:
             padding: [0, dp(5), 0, 0]
             Label:

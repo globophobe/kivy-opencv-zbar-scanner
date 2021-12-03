@@ -13,7 +13,6 @@
     size_hint: None, None
     opacity: 1 if (not app.capture_init or app.is_system_message_visible) else 0
     Label:
-        font_name: "meiryo"
         font_size: "32sp"
         text_size: self.size
         halign: "center"
@@ -21,7 +20,6 @@
         color: hex("#F4F4F4")
         text: app.system_message_header
     Label:
-        font_name: "meiryo"
         font_size: "28sp"
         text_size: self.size
         halign: "center"

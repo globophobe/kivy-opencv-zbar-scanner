@@ -172,11 +172,15 @@ class SimpleCamera(App):
         Factory.register("KivyOpenCVCamera", module="simplecamera.camera")
         Factory.register("KivyNumpyImage", module="simplecamera.numpyimage")
         # App classes
+        Factory.register("AppSettings", module="simplecamera.appsettings")
+        Factory.register("DebugCharacter", module="simplecamera.debugcharacter")
+        Factory.register("SimpleClock", module="simplecamera.simpleclock")
         Factory.register("CameraPreview", module="simplecamera.camerapreview")
         Factory.register("Body", module="simplecamera.body")
         Factory.register("FaceHelper", module="simplecamera.facehelper")
         Factory.register("Card", module="simplecamera.card")
         Factory.register("CardHelper", module="simplecamera.cardhelper")
+        Factory.register("SystemMessage", module="simplecamera.systemmessage")
         # Build
         return MainWindow()
 

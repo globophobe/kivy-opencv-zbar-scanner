@@ -1,8 +1,8 @@
-from kivy.uix.boxlayout import BoxLayout
-from kivy.metrics import dp
-from kivy.lang import Builder
 from kivy.clock import Clock
+from kivy.lang import Builder
+from kivy.metrics import dp
 from kivy.properties import NumericProperty, ObjectProperty
+from kivy.uix.boxlayout import BoxLayout
 
 from .constants import BLUE_95, GOLD_95
 from .lib.resources import get_filename

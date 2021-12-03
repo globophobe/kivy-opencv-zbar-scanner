@@ -1,10 +1,10 @@
-from kivy.uix.boxlayout import BoxLayout
+from kivy.lang import Builder
 from kivy.metrics import dp
 from kivy.properties import NumericProperty, ObjectProperty
-from kivy.lang import Builder
+from kivy.uix.boxlayout import BoxLayout
 
-from .lib.resources import get_filename
 from .constants import WASHED_BLUE_95
+from .lib.resources import get_filename
 
 Builder.load_file(get_filename("kv/facehelper.kv"))
 
